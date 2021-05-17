@@ -1,7 +1,38 @@
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
-	
+    animation.runImageAnimation(
+    Amogus,
+    [img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `],
+    500,
+    true
+    )
 })
-let Amogus = sprites.create(assets.image`Amogus`, SpriteKind.Player)
+controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
+    animation.runImageAnimation(
+    Amogus,
+    assets.animation`amog forward`,
+    200,
+    false
+    )
+})
+let Amogus: Sprite = null
+Amogus = sprites.create(assets.image`Amogus`, SpriteKind.Player)
 Amogus.setPosition(12, 101)
 scene.setBackgroundImage(img`
     3333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333
@@ -151,9 +182,9 @@ Amogus.setImage(img`
     ....f111f....f111f......
     ....f111f....f111f......
     ....f111f....f111f......
-    ....fffff....fffff......
-    ....fffff....fffff......
-    ....ffffff...ffffff.....
-    ....ff11fff..ff11fff....
-    ....fffffff..fffffff....
+    ....22222....22222......
+    ....22222....22222......
+    ....212222...212222.....
+    ....2211222..2211222....
+    ....2222222..2222222....
     `)
